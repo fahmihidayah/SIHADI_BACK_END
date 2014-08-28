@@ -24,9 +24,11 @@ $result = mysqli_query($con, $query);
 while($row = mysqli_fetch_array($result)){
     $user = new User($row["id"], $row["nama"]);
     $user->gcm_id = $row["gcm_id"];
+    $user->alamat = $row["alamat"];
+    $user->kelompok_tani = $row["kelompok_tani"];
 }
 
-$message_obj = new Message($message, $user->id, $user->nama, $user->gcm_id);
+$message_obj = new Message($message, $user->id, $user->nama, $user->gcm_id, $user->alamat, $user->kelompok_tani);
 //var_dump($list_gcm_message);
 send_gcm_notify($list_gcm_message, $message_obj);
 

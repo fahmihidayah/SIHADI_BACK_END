@@ -15,6 +15,8 @@ $result_query = mysqli_query($con, $query);
 while ($row = mysqli_fetch_array($result_query)){
     $user = new User($row["id"], $row["nama"]);
     $user->gcm_id = $row["gcm_id"];
+    $user->alamat = $row["alamat"];
+    $user->kelompok_tani = $row["kelompok_tani"];
 }
 
 if(strcmp($user->gcm_id, "0") == 0 ){
