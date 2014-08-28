@@ -1,7 +1,8 @@
 <?php
 
 function send_gcm_notify($reg_id, $message) {
-        $api_key = "AIzaSyDaLpO3MRRh0Dbp7mJn8td18VSzUvbMHGw";
+    // AIzaSyAdkByDK9Bb3gKF6LRIQrpIJJbqnlV657Q
+        $api_key = "AIzaSyAdkByDK9Bb3gKF6LRIQrpIJJbqnlV657Q";
         $url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $reg_id,

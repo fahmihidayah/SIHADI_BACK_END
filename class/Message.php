@@ -7,6 +7,7 @@ class Message {
     public $alamat;
     public $kelompok_tani;
     public $gcm_id;
+    public $grup;
     
     function __construct($message, $id, $nama, $gcm_id, $alamat, $kelompok_tani) {
         $this->message_data = $message;
